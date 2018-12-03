@@ -4,10 +4,11 @@ in its simplest classic forms:
    SUMMING:       total = total + number
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Tim Wilson.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
-
+import math
+import rosegraphics as rg
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_sum_cosines()
@@ -27,10 +28,20 @@ def run_test_sum_cosines():
     print()
     print('--------------------------------------------------')
     print('Testing the   sum_cosines   function:')
+    answer=sum_cosines(3)
+    print('Sum Cosines Test 1 expected', 'cos(0)+cos(1)+cos(2)+cos(3)')
+    print('         actual', answer)
     print('--------------------------------------------------')
 
 
 def sum_cosines(n):
+    x=0
+    if x>=0:
+        for k in range(n+1):
+            x=math.cos(k)
+            x=x+1
+        return(x)
+
     """
     What comes in:  A non-negative integer n.
     What goes out:  The sum of the cosines of the integers
