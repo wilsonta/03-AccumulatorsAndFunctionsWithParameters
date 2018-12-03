@@ -215,7 +215,7 @@ def digits_in_cube(n):
 def run_test_digits_in_power():
     """ Tests the   digits_in_power   function. """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement this function.
+    # DONE: 5. Implement this function.
     #   It TESTS the  digits_in_power  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -257,7 +257,7 @@ def digits_in_power(n, k):
       since 12 to the 3rd power is 1728 (whose digits sum to 18).
     """
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #
     ###########################################################################
     # IMPORTANT: CALL, as many times as needed,
@@ -279,6 +279,11 @@ def run_test_fancy_sums_of_digits():
     print()
     print('--------------------------------------------------')
     print('Testing the   fancy_sums_of_digits   function:')
+    # Test 1
+    expected = 9
+    answer = fancy_sums_of_digits(12)
+    print('Test 1 expected', expected)
+    print('      actual', answer)
     print('--------------------------------------------------')
 
     # -------------------------------------------------------------------------
@@ -291,6 +296,13 @@ def run_test_fancy_sums_of_digits():
 
 
 def fancy_sums_of_digits(n):
+    X=n**1000
+    X=sum_of_digits(X)
+    Y=n**999
+    Y=sum_of_digits(Y)
+    D=X**Y
+    D=sum_of_digits(D)
+    return(D)
     """
     What comes in:  A positive integer n.
     What goes out:
