@@ -7,7 +7,7 @@ This module demonstrates and practices:
   -- UNIT TESTING.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and Tim Wilson.
+         Aaron Wilkin, their colleagues, and Tim Wilson..
 """  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import m4t_tester
