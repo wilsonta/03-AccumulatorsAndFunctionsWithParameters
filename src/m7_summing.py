@@ -28,19 +28,30 @@ def run_test_sum_cosines():
     print()
     print('--------------------------------------------------')
     print('Testing the   sum_cosines   function:')
+    #Test 1
+    expected=.13416
     answer=sum_cosines(3)
-    print('Sum Cosines Test 1 expected', 'cos(0)+cos(1)+cos(2)+cos(3)')
-    print('         actual', answer)
+    print('Sum Cosines Test 1 expected', expected)
+    print('         actual:', answer)
+    #Test 2
+    answer = sum_cosines(5)
+    expected=-.2358184620
+    print('Sum Cosines Test 2 expected', expected)
+    print('         actual:', answer)
+    #Test 3
+    answer = sum_cosines(10)
+    expected=-.4174477460
+    print('Sum Cosines Test 3 expected', expected)
+    print('         actual:', answer)
     print('--------------------------------------------------')
 
 
 def sum_cosines(n):
-    x=0
-    if x>=0:
+
+    if n>=0:
         for k in range(n+1):
-            x=math.cos(k)
-            x=x+1
-        return(x)
+            total=math.cos(k)
+        return(total)
 
     """
     What comes in:  A non-negative integer n.

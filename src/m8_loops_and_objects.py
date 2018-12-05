@@ -6,18 +6,30 @@ This module demonstrates simple LOOPS of the form:
 and also USING OBJECTS.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Tim Wilson.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
 
 def main():
+    print_sequence1(20)
+    draw_circles1(20)
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
 
 
-def print_sequence1():
+def print_sequence1(n):
+    print()
+    print('--------------------------------------------------')
+    print('Running print_sequence1:')
+    for k in range(n+1):
+        total=(k)*10
+        print(total)
+    return(total)
+    print('--------------------------------------------------')
+
+
     """
     Prints:
        0
@@ -29,7 +41,7 @@ def print_sequence1():
        200
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this function, per its doc-string above.
+    # DONE: 2. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
@@ -39,7 +51,7 @@ def print_sequence1():
     print('--------------------------------------------------')
 
 
-def draw_circles1():
+def draw_circles1(n):
     """
     -- Constructs an rg.RoseWindow whose width and height are both 400.
     -- Constructs and draws 21 rg.Circle objects such that:
@@ -56,6 +68,14 @@ def draw_circles1():
     print()
     print('--------------------------------------------------')
     print('Running draw_circles1:  See graphics window')
+    window=rg.RoseWindow(400,400)
+    r=radius
+    circle=rg.Circle(rg.Point(200,200),r)
+    for k in range(n+1):
+       radius=k
+    return(radius)
+
+    window.close_on_mouse_click()
     print('--------------------------------------------------')
 
 
