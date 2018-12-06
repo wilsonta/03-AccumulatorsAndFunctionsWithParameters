@@ -13,6 +13,7 @@ import rosegraphics as rg
 
 def main():
     two_circles()
+    circle_and_rectangle()
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
 
@@ -77,8 +78,33 @@ def circle_and_rectangle():
            75.0
            150.0
     """
+    window=rg.RoseWindow()
+    circle=rg.Circle(rg.Point(200,100),90)
+    circle.fill_color='blue'
+    circle.outline_thickness=4
+    p1=rg.Point(100,50)
+    p2=rg.Point(150,70)
+    rect=rg.Rectangle(p1,p2)
+    rect.outline_thickness=3
+    circle.attach_to(window)
+    rect.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
+
+    print(circle.outline_thickness)
+    print(circle.fill_color)
+    print(circle.center)
+    print(circle.center.x)
+    print(circle.center.y)
+
+    print(rect.outline_thickness)
+    print(rect.fill_color)
+    print('Point(',((rect.corner_2.x)+(rect.corner_1.x))/2,((((rect.corner_2.y)+(rect.corner_1.y))/2)),')')
+    print((((rect.corner_2.x)+(rect.corner_1.x))/2))
+    print((((rect.corner_2.y)+(rect.corner_1.y))/2))
+
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its green doc-string above.
+    # DONE: 3. Implement this function, per its green doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
