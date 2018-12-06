@@ -18,6 +18,8 @@ def main():
     print_sequence2(18)
     draw_circles2(18)
     print_sequence3(100)
+    draw_circles3(100)
+    print_cosines(100)
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
 
@@ -149,7 +151,7 @@ def print_sequence3(n):
       100.
     """
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement this function, per its doc-string above.
+    # DONE: 6. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
@@ -161,7 +163,7 @@ def print_sequence3(n):
     print('--------------------------------------------------')
 
 
-def draw_circles3():
+def draw_circles3(n):
     """
     -- Constructs an rg.RoseWindow whose width and height are both 300.
     -- Constructs and draws 100 rg.Circle objects such that:
@@ -177,10 +179,17 @@ def draw_circles3():
     print()
     print('--------------------------------------------------')
     print('Running draw_circles3:  See graphics window')
+    window=rg.RoseWindow(300,300)
+    for k in range(n):
+        circle=rg.Circle(rg.Point(200,150),(k+1))
+        circle.attach_to(window)
+    window.render()
+    window.close_on_mouse_click
+
     print('--------------------------------------------------')
 
 
-def print_cosines():
+def print_cosines(n):
     """
     For each of the integers 0  1  2  ... 100,
     prints 80 times the cosine of that integer.
@@ -199,7 +208,7 @@ def print_cosines():
        68.9855097830147
     """
     # -------------------------------------------------------------------------
-    # TODO: 8. Implement this function, per its doc-string above.
+    # DONE: 8. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     #
@@ -213,6 +222,9 @@ def print_cosines():
     print()
     print('--------------------------------------------------')
     print('Running print_cosines:')
+    import math
+    for k in range(n+1):
+        print(80*math.cos(k))
     print('--------------------------------------------------')
 
 
