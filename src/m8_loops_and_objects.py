@@ -20,6 +20,7 @@ def main():
     print_sequence3(100)
     draw_circles3(100)
     print_cosines(100)
+    draw_cosines_and_sines(100)
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
 
@@ -228,7 +229,7 @@ def print_cosines(n):
     print('--------------------------------------------------')
 
 
-def draw_cosines_and_sines():
+def draw_cosines_and_sines(n):
     """
     -- Constructs a window whose width and height are both 400.
     -- Constructs and draws rg.Circle objects such that:
@@ -250,6 +251,13 @@ def draw_cosines_and_sines():
     print()
     print('--------------------------------------------------')
     print('Running draw_cosines_and_sines:  See graphics window')
+    import math
+    window=rg.RoseWindow(400,400)
+    for k in range(n+1):
+        circle=rg.Circle(rg.Point(200+(80*math.cos(k)),(200+(80*math.sin(k)))),10)
+        circle.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
     print('--------------------------------------------------')
 
 
