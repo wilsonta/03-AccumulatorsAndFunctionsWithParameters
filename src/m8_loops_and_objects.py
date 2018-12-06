@@ -173,7 +173,7 @@ def draw_circles3(n):
     -- Waits for the user to press the mouse, then closes the window.
     """
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement this function, per its doc-string above.
+    # DONE: 7. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
@@ -185,7 +185,7 @@ def draw_circles3(n):
         circle=rg.Circle(rg.Point(200,150),(k+1))
         circle.attach_to(window)
     window.render()
-    window.close_on_mouse_click
+    window.close_on_mouse_click()
 
     print('--------------------------------------------------')
 
@@ -244,7 +244,7 @@ def draw_cosines_and_sines(n):
     -- Waits for the user to press the mouse, then closes the window.
     """
     # -------------------------------------------------------------------------
-    # TODO: 9. Implement this function, per its doc-string above.
+    # DONE: 9. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
